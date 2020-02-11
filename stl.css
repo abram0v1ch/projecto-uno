@@ -2,11 +2,11 @@ body{
     margin: 0px;
     font-family: 'Comfortaa', cursive;
     text-align: center;
-    min-width: 1600px;
+    min-width: 1800px;
 }
 
 .container {
-    width: 1600px;
+    width: 1800px;
     margin: 0px auto;
 }
 
