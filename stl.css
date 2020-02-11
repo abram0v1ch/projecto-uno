@@ -6,8 +6,8 @@ body{
 
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 350px;
+    width: 350px;
+    height: 400px;
     perspective: 1000px;
     margin: 100px;
   }
