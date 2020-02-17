@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/crd.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+<noscript>
+    <link rel="stylesheet" href="{% static 'css/noscript.css' %}" />
+</noscript>
+{% endblock %}
+
+{% block title %}Ukrainians{% endblock %}
+
+{% block content %}
+<body class="homepage is-preload">
+	<div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header">
+            <!-- Inner -->
+            <div class="inner">
+                <header>
+                    <h1><a href="/" id="logo">Name</a></h1>
+                    <hr />
+                    <p>Slogan</p>
+                </header>
+                <footer>
+                    <a href="#banner" class="button circled scrolly">Start</a>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Banner -->
+        <section id="banner">
+            <header>
+                <h2>Famous ukrainians</h2>
+                <p>
+                    blah blah blah
+                </p>
+            </header>
+        </section>
+
+        <!-- Carousel -->
+        <div class="wrapper_card">
+            <div class="cols">
+            {% for person in people %}
+                <div class="col" onclick="window.location.href = '{{ person.image }}'" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container_card">
+                        <div class="front" style="background-image: url({{ person.image }})">
+                            <div class="inner_card">
+                                <p>{{ person.name }}</p>
+                                <span>{{ person.short_info }}</span>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner_card">
+                                <p>'{{ person.info }}'</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div class="wrapper style2">
+
+            <article id="main" class="container special">
+                <a href="#" class="image featured"><img src="{% static 'img/pic06.jpg' %}" alt="" /></a>
+                <header>
+                    <h2><a href="#">About the project</a></h2>
+                    <p>
+                        Sociis aenean eu aenean mollis mollis facilisis primis ornare penatibus aenean. Cursus ac enim pulvinar curabitur morbi convallis. Lectus malesuada sed fermentum dolore amet.
+                    </p>
+                </header>
+                <p>
+                    Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus sit arcu sociis. Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. Primis aliquam mus lacinia lobortis phasellus suscipit. Fermentum lobortis non tristique ante proin sociis accumsan lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia natoque aenean scelerisque.
+                </p>
+                <footer>
+                    <a href="#" class="button">Continue Reading</a>
+                </footer>
+            </article>
+        </div>
+
+        <!-- Features -->
+        <div class="wrapper style1">
+
+            <section id="features" class="container special">
+                <header>
+                    <h2>About us</h2>
+                    <p>Ipsum volutpat consectetur orci metus consequat imperdiet duis integer semper magna.</p>
+                </header>
+                <div class="row">
+                    <article class="col-4 col-12-mobile special" style="margin: 0px auto; padding: 10px 0px;">
+                        <a href="#" class="image featured"><img src="{% static 'img/pic07.jpg' %}" alt="" /></a>
+                        <header>
+                            <h3><a href="#">Nataliia Kulieshova</a></h3>
+                        </header>
+                        <p>
+                            Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+                        </p>
+                    </article>
+                    <article class="col-4 col-12-mobile special" style="margin: 0px auto; padding: 10px 0px;">
+                        <a href="#" class="image featured"><img src="{% static 'img/pic08.jpg' %}" alt="" /></a>
+                        <header>
+                            <h3><a href="#">Vasyl Abramovych</a></h3>
+                        </header>
+                        <p>
+                            Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+                        </p>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+
+
+        <!-- Scripts -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+        <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+        <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+        <script src="{% static 'js/browser.min.js' %}"></script>
+        <script src="{% static 'js/breakpoints.min.js' %}"></script>
+        <script src="{% static 'js/util.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+{% endblock %}
