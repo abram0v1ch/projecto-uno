@@ -1,7 +1,7 @@
-{% extends 'base.html' %}
+<html>
 
 {% load static %}
-
+<head>
 {% block css %}
 <link rel="stylesheet" href="main.css" />
 <link rel="stylesheet" type="text/css" href="crd.css">
@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="{% static 'css/noscript.css' %}" />
 </noscript>
 {% endblock %}
-
 {% block title %}Ukrainians{% endblock %}
-
+</head>
 {% block content %}
 <body class="homepage is-preload">
 	<div id="page-wrapper">
