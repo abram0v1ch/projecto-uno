@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/crd.css' %}" />
+{% endblock  %}
+{% block content %}
+<body>
+  <div class="wrapper">
+      <h1>Parallax Flipping Cards</h1>
+      <div class="cols">
+          {% for person in people %}
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+              <div class="container">
+                  <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+                      <div class="inner">
+                          <p>{{ person.name }}</p>
+                          <span>{{ person.short_info }}</span>
+                      </div>
+                  </div>
+                  <div class="back">
+                      <div class="inner">
+                          <p>'{{ person.info }}'</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      {% endfor %}
+  </div>
+</body>
+{% endblock %}
